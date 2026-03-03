@@ -21,7 +21,7 @@ import java.util.List;
 @Validated
 @RestController
 @RequestMapping("/api/v1/notes6")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequiredArgsConstructor
 public class NoteController {
 

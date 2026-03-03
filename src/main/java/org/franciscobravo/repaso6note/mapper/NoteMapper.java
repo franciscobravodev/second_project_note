@@ -14,9 +14,6 @@ public class NoteMapper {
      * Solo se copian los campos modificables por el usuario.
      */
     public Note toEntity(NoteRequest request) {
-//        if (request == null) {
-//            return null;
-//        }
         Objects.requireNonNull(request, "note no puede ser null");
         return new Note(
                 request.title(),
@@ -32,9 +29,6 @@ public class NoteMapper {
 
         Objects.requireNonNull(entity, "Note entity no puede ser null");
         Objects.requireNonNull(request, "NoteRequest no puede ser null");
-//        if (entity == null || request == null) {
-//            return;
-//        }
         entity.setTitle(request.title());
         entity.setContent(request.content());
     }
@@ -45,10 +39,6 @@ public class NoteMapper {
      */
     public NoteResponse toResponse(Note note) {
         Objects.requireNonNull(note, "Note no puede ser null");
-//        if (note == null) {
-//            return null;
-//        }
-
         return new NoteResponse(
                 note.getId(),
                 note.getTitle(),           // ← corregido: title va aquí
